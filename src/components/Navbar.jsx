@@ -43,7 +43,7 @@ export default function Navbar() {
             className="flex items-center gap-2 text-primary-400 font-mono font-medium hover:text-primary-300 transition-colors"
           >
             <Code2 size={20} />
-            <span>{personalInfo.name.split(" ")[0].toLowerCase()}.dev</span>
+            <span>{personalInfo.name.split(" ")[0].toLowerCase()}</span>
           </a>
 
           {/* Desktop links */}

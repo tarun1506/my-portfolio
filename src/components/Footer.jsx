@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="border-t border-dark-border py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-slate-500 text-sm">
-          © {new Date().getFullYear()} {personalInfo.name}. Built with React & Tailwind.
+          © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
           <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">

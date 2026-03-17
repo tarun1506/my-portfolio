@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, ChevronsDown } from "lucide-react";
 import { ReactTyped } from "react-typed";
 import tarunPic from "../assets/tarun.png";
 import { personalInfo } from "../data/portfolio";
@@ -33,7 +33,6 @@ export default function Hero() {
       {/* ── Foreground layout: left + right panels overlapping the image ── */}
       <div className="relative z-10 min-h-screen w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
         <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center">
-
           {/* ── LEFT: text ── */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -48,10 +47,9 @@ export default function Hero() {
               <br />
               <ReactTyped
                 strings={[
-                  "ML Engineer",
-                  "Full-Stack Dev",
-                  "Web Developer",
-                  "AI Builder",
+                  "Software Engineer",
+                  "Full Stack Development",
+                  "Backend Developer",
                 ]}
                 typeSpeed={60}
                 backSpeed={40}
@@ -71,7 +69,7 @@ export default function Hero() {
               className="w-12 h-12 rounded-full bg-primary-600 hover:bg-primary-500 flex items-center justify-center text-white transition-colors animate-bounce"
               aria-label="Scroll down"
             >
-              <ArrowDown size={20} />
+              <ChevronsDown size={20} />
             </button>
           </motion.div>
 
@@ -84,17 +82,19 @@ export default function Hero() {
           >
             {/* About Me */}
             <div>
-              <h3 className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-3">
+              <h3 className="text-white text-lg font-bold uppercase tracking-[0.2em] mb-3">
                 About Me
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-3">
-                {personalInfo.bio.slice(0, 120)}…
+              <p className="text-slate-400 text-md leading-relaxed mb-3">
+                I am a Master's graduate from Northeastern University with 4+ years of experience as a Software Engineer.
               </p>
               <a
                 href="#about"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
+                  document
+                    .querySelector("#about")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="text-white text-xs font-bold uppercase tracking-widest hover:text-primary-400 transition-colors"
               >
@@ -102,21 +102,23 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="w-full h-px bg-slate-700/50" />
+            <div className="w-full h-px bg-slate-400/50" />
 
             {/* My Work */}
             <div>
-              <h3 className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-3">
+              <h3 className="text-white text-lg font-bold uppercase tracking-[0.2em] mb-3">
                 My Work
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-3">
-                From ML pipelines to polished web apps — explore the projects I've shipped.
+              <p className="text-slate-400 text-md leading-relaxed mb-3">
+                From full stack web apps to backend systems, explore the projects I've built.
               </p>
               <a
                 href="#projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+                  document
+                    .querySelector("#projects")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="text-white text-xs font-bold uppercase tracking-widest hover:text-primary-400 transition-colors"
               >
@@ -124,27 +126,39 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="w-full h-px bg-slate-700/50" />
+            <div className="w-full h-px bg-slate-400/50" />
 
             {/* Follow Me */}
             <div>
-              <h3 className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-4">
+              <h3 className="text-white text-lg font-bold uppercase tracking-[0.2em] mb-4">
                 Follow Me
               </h3>
               <div className="flex items-center gap-4">
-                <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                <a
+                  href={personalInfo.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   <Github size={18} />
                 </a>
-                <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                <a
+                  href={personalInfo.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   <Linkedin size={18} />
                 </a>
-                <a href={`mailto:${personalInfo.email}`} className="text-slate-400 hover:text-white transition-colors">
+                <a
+                  href={`mailto:${personalInfo.email}`}
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   <Mail size={18} />
                 </a>
               </div>
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
