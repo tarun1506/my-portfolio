@@ -28,11 +28,15 @@ export default function Experience() {
                 <Briefcase size={14} className="text-primary-400" />
               </div>
 
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-shadow">
+              <div className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-primary-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-shadow">
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
                   <div>
-                    <h3 className="text-white font-semibold text-lg">{job.role}</h3>
-                    <p className="text-primary-400 font-medium">{job.company}</p>
+                    <h3 className="text-white font-semibold text-lg">
+                      {job.role}
+                    </h3>
+                    <p className="text-primary-400 font-medium">
+                      {job.company}
+                    </p>
                   </div>
                   <div className="text-right text-sm text-slate-400">
                     <p>{job.period}</p>
@@ -44,8 +48,13 @@ export default function Experience() {
                 </div>
                 <ul className="space-y-2">
                   {job.bullets.map((bullet, bi) => (
-                    <li key={bi} className="flex gap-3 text-slate-300 text-sm leading-relaxed">
-                      <span className="text-primary-400 mt-1 flex-shrink-0">▸</span>
+                    <li
+                      key={bi}
+                      className="flex gap-3 text-slate-300 text-sm leading-relaxed"
+                    >
+                      <span className="text-primary-400 mt-1 flex-shrink-0">
+                        ▸
+                      </span>
                       {bullet}
                     </li>
                   ))}
