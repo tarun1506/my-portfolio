@@ -10,7 +10,7 @@ function ProjectCard({ project, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="bg-dark-card border border-dark-border rounded-xl p-6 flex flex-col gap-4 hover:border-primary-500/50 transition-colors group"
+      className="bg-dark-card border border-dark-border rounded-xl p-6 flex flex-col gap-4 hover:border-primary-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-colors group"
     >
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-white font-semibold text-lg group-hover:text-primary-400 transition-colors">

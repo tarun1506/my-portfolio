@@ -30,6 +30,9 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
+      minHeight: {
+        svh: '100svh',
+      },
     },
   },
   plugins: [],

@@ -16,7 +16,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="bg-dark-card border border-dark-border rounded-xl p-6"
+            className="bg-dark-card border border-dark-border rounded-xl p-6 transition-all duration-300 hover:border-primary-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
           >
             <h3 className="text-primary-400 font-semibold text-sm uppercase tracking-wider mb-4">
               {group.category}

@@ -13,7 +13,7 @@ export default function Experience() {
         {/* Timeline line */}
         <div className="absolute left-4 top-0 bottom-0 w-px bg-dark-border hidden sm:block" />
 
-        <div className="space-y-10">
+        <div className="space-y-10 ">
           {experience.map((job, i) => (
             <motion.div
               key={job.company + job.role}
@@ -28,7 +28,7 @@ export default function Experience() {
                 <Briefcase size={14} className="text-primary-400" />
               </div>
 
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <div className="bg-dark-card border border-dark-border rounded-xl p-6 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-shadow">
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
                   <div>
                     <h3 className="text-white font-semibold text-lg">{job.role}</h3>
