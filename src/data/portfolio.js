@@ -11,7 +11,7 @@ export const personalInfo = {
   email: "tarunmohan15@hotmail.com",
   github: "https://github.com/tarun1506",
   linkedin: "https://www.linkedin.com/in/mohantarun/",
-  resumeUrl: "./src/assets/Resume_Tarun.pdf",
+  resumeUrl: "/Resume_Tarun.pdf",
   location: "United States",
   phone: "+1 (510) 513-5915",
 };
